@@ -1,13 +1,14 @@
 package View;
 
 import Controller.*;
-import java.awt.*;
 import javax.swing.*;
+
+import java.awt.event.*;
 
 public class View {
 
     public static void main(String[] args) {
-        DataTemp data = new DataTemp();
+
         JFrame f = new JFrame("Menu Registrasi");
         JLabel usernameLabel = new JLabel("Username : ");
         JLabel passwordJLabel = new JLabel("Password : ");
@@ -55,6 +56,15 @@ public class View {
         f.setSize(500, 300);
         f.setLayout(null);
         f.setVisible(true);
+
+        registrasi.addActionListener(new ActionListener() {
+            DataTemp database = new DataTemp();
+
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
     }
 
     public static void menuLogin() {

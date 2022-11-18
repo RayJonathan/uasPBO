@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class User extends CategoryUser {
+public class User extends CategoryUser {
     int userId;
     String userPassword;
     String userName;
