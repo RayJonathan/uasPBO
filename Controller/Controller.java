@@ -1,10 +1,7 @@
 package Controller;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import Model.User;
 
 public class Controller {
@@ -25,6 +22,18 @@ public class Controller {
             stmt.setString(7, user.getCategoryName());
             stmt.setInt(8, user.getUserFollowers());
             stmt.executeUpdate();
+            return (true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return (false);
+        }
+    }
+
+    public static boolean checkUser(User user, String username) {
+        conn.connect();
+        String query = "SELECT userName FROM user WHERE userName=" + username + ";";
+        try {
+            PreparedStatement stmt = conn.con.prepareStatement(query);
             return (true);
         } catch (SQLException e) {
             e.printStackTrace();

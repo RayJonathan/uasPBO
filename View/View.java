@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class View {
+    DataTemp temp = new DataTemp();
 
-    public static void main(String[] args) {
-
+    public static void menuRegistrasi() {
         JFrame f = new JFrame("Menu Registrasi");
         JLabel usernameLabel = new JLabel("Username : ");
         JLabel passwordJLabel = new JLabel("Password : ");
@@ -58,7 +58,6 @@ public class View {
         f.setVisible(true);
 
         registrasi.addActionListener(new ActionListener() {
-            DataTemp database = new DataTemp();
 
             public void actionPerformed(ActionEvent e) {
 

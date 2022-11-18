@@ -25,4 +25,7 @@ public class CategoryUser {
         this.categoryName = categoryName;
     }
 
+    public static void add(CategoryUser categoryUser) {
+    }
+
 }
